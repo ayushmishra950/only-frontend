@@ -43,7 +43,7 @@ const SearchPage = () => {
       
       try {
         setIsLoading(true);
-        const res = await axios.post('http://localhost:5000/graphql', {
+        const res = await axios.post('https://social-media-4hxh.onrender.com/graphql', {
           query: `
           query GetSuggestions($userId: ID!) {
             suggestedUsers(userId: $userId) {
@@ -220,7 +220,7 @@ const SearchPage = () => {
 
     try {
       const response = await axios.post(
-        'http://localhost:5000/graphql',
+        'https://social-media-4hxh.onrender.com/graphql',
         { query: graphqlQuery, variables: { username: query, userId: tokenUser?.id } },
         {
           headers: { 'Content-Type': 'application/json' },
