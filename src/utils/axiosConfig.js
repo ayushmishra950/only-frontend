@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Create axios instance with default config
 const axiosInstance = axios.create({
-  baseURL: 'http://localhost:5000',
+  baseURL: 'https://social-media-4hxh.onrender.com',
   withCredentials: true, // Important for cookie-based auth
   headers: {
     'Content-Type': 'application/json',
