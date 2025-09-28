@@ -19,7 +19,7 @@ try {
   }
   
   // Create socket with reconnection options
-  socket = io("http://localhost:5000", {
+  socket = io("https://social-media-4hxh.onrender.com", {
     ...options,
     reconnection: true,
     reconnectionAttempts: 10,
