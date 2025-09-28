@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { io } from "socket.io-client";
 import { GetTokenFromCookie } from '../getToken/GetToken';
 
-const socket = io("http://localhost:5000"); // backend socket server
+const socket = io("https://social-media-4hxh.onrender.com"); // backend socket server
 
 const ReceiveCall = () => {
   const [incomingCall, setIncomingCall] = useState(null);
