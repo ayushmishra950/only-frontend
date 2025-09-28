@@ -114,7 +114,7 @@ useEffect(() => {
         }}`;
         const variables = {  userId: tokens?.id, postId : id,text : text};
 
-        const response = await axios.post("http://localhost:5000/graphql", { query: query, variables: variables }, {
+        const response = await axios.post("https://social-media-4hxh.onrender.com/graphql", { query: query, variables: variables }, {
           headers: {
             'Content-Type': 'application/json'
           }
@@ -136,7 +136,7 @@ useEffect(() => {
         const query = ` mutation LikePost($userId: ID!,$postId: ID!) { LikePost(userId: $userId,postId: $postId)}`;
         const variables = {  userId: tokens?.id, postId : id};
 
-        const response = await axios.post("http://localhost:5000/graphql", { query: query, variables: variables }, {
+        const response = await axios.post("https://social-media-4hxh.onrender.com/graphql", { query: query, variables: variables }, {
           headers: {
             'Content-Type': 'application/json'
           }
@@ -158,7 +158,7 @@ useEffect(() => {
             setShowDeleteConfirm(true);
 
         const query = `mutation DeletePost($id: ID!) { DeletePost(id: $id) }`;
-        const response =  await axios.post("http://localhost:5000/graphql", { query: query, variables: { id } }, {
+        const response =  await axios.post("https://social-media-4hxh.onrender.com/graphql", { query: query, variables: { id } }, {
           headers: {
             'Content-Type': 'application/json'
           } });
@@ -171,7 +171,7 @@ useEffect(() => {
     try {
       const query = ` mutation DeletePost($id: ID!) { DeletePost(id: $id) }`;
       const variables = { id: deletePostId };
-      const response = await axios.post("http://localhost:5000/graphql", { query: query, variables: variables }, {
+      const response = await axios.post("https://social-media-4hxh.onrender.com/graphql", { query: query, variables: variables }, {
         headers: {
           'Content-Type': 'application/json'
         }
