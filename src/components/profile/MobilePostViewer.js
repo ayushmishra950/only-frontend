@@ -347,7 +347,7 @@ const MobilePostViewer = ({ posts, initialIndex = 0, onClose, currentUser }) => 
           }
         `;
         const variables = { id: postId };
-        await axios.post('http://localhost:5000/graphql', { query: mutation, variables }, {
+        await axios.post('https://social-media-4hxh.onrender.com/graphql', { query: mutation, variables }, {
           headers: {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${GetRawTokenFromCookie() || ''}`,
