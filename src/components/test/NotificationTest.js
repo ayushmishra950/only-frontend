@@ -17,7 +17,7 @@ const NotificationTest = () => {
 
       /* console.log(...) */ void 0;
       
-      socketRef.current = io(process.env.REACT_APP_SERVER_URL || 'http://localhost:5000', {
+      socketRef.current = io(process.env.REACT_APP_SERVER_URL || 'https://social-media-4hxh.onrender.com', {
         query: { userId: userIdString },
         transports: ['websocket', 'polling']
       });
