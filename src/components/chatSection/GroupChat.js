@@ -816,7 +816,7 @@ const GroupChat = ({ group, onBack, onGroupUpdate }) => {
       const formData = new FormData();
       formData.append('file', recordedAudio.file);
       
-      const response = await fetch('http://localhost:5000/upload-chat-media', {
+      const response = await fetch('https://social-media-4hxh.onrender.com/upload-chat-media', {
         method: 'POST',
         body: formData,
         credentials: 'include'
@@ -865,7 +865,7 @@ const GroupChat = ({ group, onBack, onGroupUpdate }) => {
       const formData = new FormData();
       formData.append('file', audioFile);
       
-      const response = await fetch('http://localhost:5000/upload-chat-media', {
+      const response = await fetch('https://social-media-4hxh.onrender.com/upload-chat-media', {
         method: 'POST',
         body: formData,
         credentials: 'include'
