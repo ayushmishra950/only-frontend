@@ -478,7 +478,7 @@ const ChatList = ({ activeTab, createdGroups }) => {
     const counts = {};
     for (const group of groupsData.getUserGroups) {
       try {
-        const response = await fetch('http://localhost:5000/graphql', {
+        const response = await fetch('https://social-media-4hxh.onrender.com/graphql', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -542,7 +542,7 @@ const ChatList = ({ activeTab, createdGroups }) => {
       if (user.id === sender.id) continue; // Skip self
 
       try {
-        const response = await fetch('http://localhost:5000/graphql', {
+        const response = await fetch('https://social-media-4hxh.onrender.com/graphql', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -881,7 +881,7 @@ const ChatList = ({ activeTab, createdGroups }) => {
         // Mark messages as read in the background
         try {
           // Get all unread messages for this group and mark them as read
-          const response = await fetch('http://localhost:5000/graphql', {
+          const response = await fetch('https://social-media-4hxh.onrender.com/graphql', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -2166,7 +2166,7 @@ const ChatList = ({ activeTab, createdGroups }) => {
       formData.append('file', recordedAudio.file);
       formData.append('duration', recordedAudio.duration.toString()); // Pass duration as string
 
-      const response = await fetch('http://localhost:5000/upload-chat-media', {
+      const response = await fetch('https://social-media-4hxh.onrender.com/upload-chat-media', {
         method: 'POST',
         body: formData,
         credentials: 'include'
@@ -2234,7 +2234,7 @@ const ChatList = ({ activeTab, createdGroups }) => {
       const formData = new FormData();
       formData.append('file', audioFile);
 
-      const response = await fetch('http://localhost:5000/upload-chat-media', {
+      const response = await fetch('https://social-media-4hxh.onrender.com/upload-chat-media', {
         method: 'POST',
         body: formData,
         credentials: 'include'
