@@ -43,7 +43,7 @@ export const useRealTimeNotifications = () => {
     }
 
     try {
-      socketRef.current = io(process.env.REACT_APP_SERVER_URL || 'http://localhost:5000', {
+      socketRef.current = io(process.env.REACT_APP_SERVER_URL || 'https://social-media-4hxh.onrender.com', {
         query: { userId: userIdString }, // Use query instead of auth for compatibility
         transports: ['polling', 'websocket'], // Try polling first, then websocket
         reconnection: true,
