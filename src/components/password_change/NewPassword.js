@@ -115,7 +115,7 @@ const handleSubmit = async (e) => {
   
 
   try {
-    const response = await axios.post('http://localhost:5000/graphql', {
+    const response = await axios.post('https://social-media-4hxh.onrender.com/graphql', {
       query: `
  mutation newPassword($email: String!, $newPassword: String!) {
   newPassword(email: $email, newPassword: $newPassword)
