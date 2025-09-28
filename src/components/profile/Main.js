@@ -73,7 +73,7 @@ export default function Main({ userId }) {
         
         const variables = { id: targetUserId.toString() };
         
-        const response = await axios.post("http://localhost:5000/graphql", {
+        const response = await axios.post("https://social-media-4hxh.onrender.com/graphql", {
           query,
           variables
         }, {
